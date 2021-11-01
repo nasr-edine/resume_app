@@ -8,12 +8,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+ENVIRONMENT = os.environ.get('ENVIRONMENT', default='development')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = 'django-insecure-=onryeo7p9)rt8nbk+lvq(r%g37l16nk176(h$2b$$mrqm8apa'
-
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = int(os.environ.get('DEBUG', default=0))
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['resume-python-developer.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -26,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    # Third-party
 
     # local
     'profiles.apps.ProfilesConfig',
