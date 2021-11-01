@@ -1,15 +1,40 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.urls import resolve, reverse
 from pyquery import PyQuery
-
+from .models import Skill
+from .models import CustomUser
 from .views import HomePageView
 
 
-class HomepageTests(SimpleTestCase):
+class HomepageTests(TestCase):
 
     def setUp(self):
+        self.user1 = CustomUser.objects.create(
+            username="johndoo", first_name="john", last_name="doo", email="johndoo@mail.com")
+
+        self.skill1 = Skill.objects.create(name="heroku", score=50, is_key_skill=False)
+
+        self.user1.skills.add(self.skill1)
+
+        self.user1 = CustomUser.objects.get(first_name="john")
+        self.skill1 = Skill.objects.get(name="heroku")
+
         url = reverse('home:index')
         self.response = self.client.get(url)
+
+    def test_skill_is_created(self):
+        """skill is created"""
+        self.assertEqual(self.skill1.name, "heroku")
+        self.assertEqual(self.skill1.score, 50)
+        self.assertEqual(self.skill1.is_key_skill, False)
+
+    def test_profile_is_created(self):
+        """Profile is created"""
+        self.assertEqual(self.user1.username, "johndoo")
+        self.assertEqual(self.user1.first_name, "john")
+        self.assertEqual(self.user1.last_name, "doo")
+        self.assertEqual(self.user1.email, "johndoo@mail.com")
+        self.assertEqual(self.user1.skills.all()[0].name, "heroku")
 
     def test_homepage_status_code(self):
         response = self.client.get('/')

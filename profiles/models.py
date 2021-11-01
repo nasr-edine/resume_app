@@ -23,5 +23,5 @@ class CustomUser(AbstractUser):
     skills = models.ManyToManyField(Skill, blank=True)
     cv = models.FileField(blank=True, null=True, upload_to="cv")
 
-    # def __str__(self):
-    #     return f'{self.user.first_name} {self.user.last_name}'
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
