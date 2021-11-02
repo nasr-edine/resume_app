@@ -59,6 +59,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'resume_app.context_processors.project_context'
+
             ],
         },
     },
@@ -113,14 +115,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+# STATICFILES_DIRS = []
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media')
+]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = []
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
