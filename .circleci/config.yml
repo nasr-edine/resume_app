@@ -70,6 +70,10 @@ jobs:
       #       curl https://cli-assets.heroku.com/install.sh | sudo sh
       #       HEROKU_API_KEY=${HEROKU_API_KEY} heroku apps:destroy --app $HEROKU_APP_NAME --confirm $HEROKU_APP_NAME
       - run:
+          name: install heroku cli
+          command: |
+            curl https://cli-assets.heroku.com/install.sh | sudo sh
+      - run:
           name: heroku create app
           command: |
             HEROKU_API_KEY=${HEROKU_API_KEY} heroku create $HEROKU_APP_NAME
