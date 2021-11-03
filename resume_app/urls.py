@@ -9,6 +9,7 @@ urlpatterns = [
     # Local apps
     path('', include('profiles.urls', namespace='home')),
     path('contact/', include('contacts.urls', namespace='contact')),
+    path('portfolio/', include('portfolio.urls', namespace='portfolio')),
 
 ]
 
