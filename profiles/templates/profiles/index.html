@@ -125,4 +125,46 @@
         </div>
     </div>
 </section>
+
+<section>
+    <div class="sectionSpace">
+        <div class="container">
+            <div class="portfolioCol">
+                <div class="row pb-3">
+                    <div class="col">
+                        <h4 class="smText regular">Featured Work</h4>
+                    </div>
+                    <div class="col-auto">
+                        <a href="{% url 'portfolio:portfolios' %}" class="simpleLink">View all</a>
+                    </div>
+                </div>
+                {% for p in portfolio %}
+                {% if p.is_active %}
+                <div class="portfolioCard">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-auto">
+                            <div class="portfolioImgCol">
+                                <a href="{% url 'portfolio:portfolio' slug=p.slug %}"><img src="{{p.image.url}}"
+                                        alt="..."></a>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="portfolioContentCol">
+                                <h4 class="lgTitle"><a href="{% url 'portfolio:portfolio' slug=p.slug %}">{{p.name}}</a>
+                                </h4>
+                                <ul class="portfolioOption">
+                                    <li><span class="dateLbl">{{p.date.year}}</span></li>
+                                </ul>
+                                <p>{{p.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock content %}

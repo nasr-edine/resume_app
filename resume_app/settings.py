@@ -30,11 +30,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third-party
+    'ckeditor',
 
     # local
     'profiles.apps.ProfilesConfig',
     'certificates.apps.CertificatesConfig',
-    'contacts.apps.ContactsConfig'
+    'contacts.apps.ContactsConfig',
+    'portfolio.apps.PortfolioConfig'
 ]
 
 MIDDLEWARE = [
