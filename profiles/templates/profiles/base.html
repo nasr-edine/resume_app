@@ -11,6 +11,9 @@
     <link rel="apple-touch-icon" type="image/jpg" href="{% static 'images/icon.png' %}">
     <!-- Bootstrap CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 
     <title>{% block title %}Resume App{%endblock %}</title>
 
@@ -24,8 +27,10 @@
 
     {% include 'profiles/partials/footer.html' %}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
