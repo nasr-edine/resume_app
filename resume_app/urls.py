@@ -8,6 +8,8 @@ urlpatterns = [
 
     # Local apps
     path('', include('profiles.urls', namespace='home')),
+    path('contact/', include('contacts.urls', namespace='contact')),
+
 ]
 
 if settings.DEBUG:
