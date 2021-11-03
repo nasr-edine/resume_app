@@ -33,7 +33,8 @@ INSTALLED_APPS = [
 
     # local
     'profiles.apps.ProfilesConfig',
-    'certificates.apps.CertificatesConfig'
+    'certificates.apps.CertificatesConfig',
+    'contacts.apps.ContactsConfig'
 ]
 
 MIDDLEWARE = [
