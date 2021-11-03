@@ -16,5 +16,5 @@ class CustomUserModelAdmin(UserAdmin):
         ('Personal info', {'fields': ('first_name', 'last_name')}),
         ('Contact', {'fields': ('email',)}),
         ('security', {'fields': ('password',)}),
-        ('custom fields', {'fields': ('avatar', 'title', 'bio', 'cv')})
+        ('custom fields', {'fields': ('avatar', 'title', 'bio', 'cv', 'skills')})
     )
