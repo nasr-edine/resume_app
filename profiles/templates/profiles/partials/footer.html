@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!-- ================================
 Start Footer
 ================================= -->
@@ -15,7 +17,7 @@ Start Footer
                             alt="..."></a></li>
             </ul>
             <div class="copyrightCol">
-                <p>Copyright ©{% now 'Y' %} All rights reserved. Designed by <a href="{%url 'contact:contact'%}"
+                <p>Copyright ©{% now 'Y' %}{% trans 'copyright' %}<a href="{%url 'contact:contact'%}"
                         target="_blank">Nasr-edine Drai Design</a></p>
             </div>
         </div>

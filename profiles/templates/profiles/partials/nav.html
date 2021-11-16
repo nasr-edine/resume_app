@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <header>
     <div class="headerCol">
@@ -17,7 +18,7 @@
                     <div class="navCollapseCol">
                         <div class="navCol">
                             <ul>
-                                <li><a href="{%url 'home:index'%}">Home</a></li>
+                                <li><a href="{%url 'home:index'%}">{% trans 'HomePage' %}</a></li>
                                 <li><a href="{%url 'portfolio:portfolios' %}">Portfolio</a></li>
                                 <li><a href="{%url 'contact:contact'%}">Contact</a></li>
                             </ul>

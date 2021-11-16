@@ -3,9 +3,12 @@ from profiles.models import CustomUser
 
 
 def project_context(request):
-    context = {
-        'me': CustomUser.objects.first(),
-
-    }
-
+    if request.LANGUAGE_CODE == 'fr':
+        context = {
+            'me': CustomUser.objects.last(),
+        }
+    else:
+        context = {
+            'me': CustomUser.objects.first(),
+        }
     return context

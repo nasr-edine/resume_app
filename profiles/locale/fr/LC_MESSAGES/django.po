@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-16 19:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/profiles/base.html:20
+msgid "AppName"
+msgstr "CV numerique"
+
+#: templates/profiles/index.html:20
+msgid "HelloHeading"
+msgstr "Bienvenue, je suis "
+
+#: templates/profiles/index.html:28
+msgid "downloadResume"
+msgstr "Telecharger le CV"
+
+#: templates/profiles/index.html:48
+msgid "keySkills"
+msgstr "Compétences Clés"
+
+#: templates/profiles/index.html:64
+msgid "CodingSkills"
+msgstr "Compétences en codage"
+
+#: templates/profiles/index.html:99
+msgid "certificates"
+msgstr "Diplômes"
+
+#: templates/profiles/index.html:138
+msgid "featuredWork"
+msgstr "Portfolio"
+
+#: templates/profiles/index.html:141
+msgid "viewAll"
+msgstr "Voir tous"
+
+#: templates/profiles/partials/footer.html:18
+msgid "copyright"
+msgstr " Tous droits réservés. Conçu par "
+
+#: templates/profiles/partials/nav.html:21
+msgid "HomePage"
+msgstr "Accueil"

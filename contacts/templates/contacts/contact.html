@@ -1,5 +1,6 @@
 {% extends 'profiles/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <section>
@@ -8,7 +9,7 @@
             <div class="row g-4 g-md-3  align-items-center">
                 <div class="col-md-6">
                     <div class="bannerContent">
-                        <h1 class="xlTitle pb-md-3">Contact me below</h1>
+                        <h1 class="xlTitle pb-md-3">{% trans 'contactHeading' %}</h1>
                     </div>
                 </div>
             </div>
@@ -22,7 +23,7 @@
             <form id="contactForm" method="post" action={% url "contact:contact" %}>
                 {% csrf_token %}
                 {{ form.as_p }}
-                <input class='btn btnPrimary' type="submit" value="Submit" />
+                <input class='btn btnPrimary' type="submit" value="{% trans 'Submit' %}" />
             </form>
 
         </div>

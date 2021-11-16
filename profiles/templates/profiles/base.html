@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
-    <title>{% block title %}Resume App{%endblock %}</title>
+    <title>{% block title %}{% trans 'AppName' %}{%endblock %}</title>
 
 </head>
 

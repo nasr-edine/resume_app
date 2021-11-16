@@ -1,6 +1,7 @@
 {% extends 'profiles/base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% include 'main/partials/nav.html' %}
 
@@ -16,13 +17,15 @@
                 </div>
                 <div class="col-md">
                     <div class="bannerContent">
-                        <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}</h1>
+                        <h1 class="xlTitle pb-3">{% trans 'HelloHeading' %} {{me.first_name|title}}</h1>
+                        <h1></h1>
+
                         <p>{{me.bio}}</p>
                         <div class="bannerBtnCol">
                             <div class="row">
                                 <div class="col-auto">
-                                    <a id="cv" download href="{{me.cv.url}}" class="btn btnPrimary">Download
-                                        Resume</a>
+                                    <a id="cv" download href="{{me.cv.url}}"
+                                        class="btn btnPrimary">{% trans 'downloadResume' %}</a>
                                 </div>
                                 <div class="col-auto">
                                     <a href="{% url 'contact:contact' %}" class="btn btnOutline">Contact</a>
@@ -42,7 +45,7 @@
             <div class="row">
                 <div class="col-md-auto">
                     <div class="keySkillCol">
-                        <h4 class="smTitle pb-3">Key Skills</h4>
+                        <h4 class="smTitle pb-3">{% trans 'keySkills' %}</h4>
                         {% for sk in me.skills.all %}
                         {% if sk.is_key_skill %}
                         <div class="keySkillCard">
@@ -58,7 +61,7 @@
                     </div>
                 </div>
                 <div class="col-md">
-                    <h4 class="smTitle pb-3">Coding Skills</h4>
+                    <h4 class="smTitle pb-3">{% trans 'CodingSkills' %}</h4>
                     <div class="progressCol">
                         <div class="progressCard">
                             {% for sk in me.skills.all %}
@@ -93,7 +96,7 @@
         <div class="container">
             <div class="row pb-3">
                 <div class="col">
-                    <h4 class="smText regular">Certificates</h4>
+                    <h4 class="smText regular">{% trans 'certificates' %}</h4>
                 </div>
             </div>
             <div class="sliderOuter">
@@ -132,10 +135,10 @@
             <div class="portfolioCol">
                 <div class="row pb-3">
                     <div class="col">
-                        <h4 class="smText regular">Featured Work</h4>
+                        <h4 class="smText regular">{% trans 'featuredWork' %}</h4>
                     </div>
                     <div class="col-auto">
-                        <a href="{% url 'portfolio:portfolios' %}" class="simpleLink">View all</a>
+                        <a href="{% url 'portfolio:portfolios' %}" class="simpleLink">{% trans 'viewAll' %}</a>
                     </div>
                 </div>
                 {% for p in portfolio %}
