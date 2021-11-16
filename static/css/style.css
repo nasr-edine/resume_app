@@ -316,11 +316,11 @@ a, .btn {
 .progress.progressStyle {
 	height: 8px;
 	padding: 1px;
-	background-color: var(--secondaryColor);
 	border-radius: 3px;
+  border: 1px solid #000;
 }
 .progressStyle .progress-bar {
-	background-color: #fff;
+	background-color: var(--secondaryColor);
 	border-radius: 3px;
 }
 .progressCol + .progressCol {
@@ -461,8 +461,6 @@ a, .btn {
 body.navToggleActive {
 	overflow: hidden;
 }
-
-
 
 
 /* footer */
